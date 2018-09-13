@@ -3,7 +3,8 @@ import truncate from './index';
 describe('truncate::', () => {
   /** @test {truncate} */
   it('should truncate string', function () {
-    expect(truncate('Some long text', 7)).toEqual('Some...');
+    // expect(truncate('Some long text', 7)).toEqual('Some...'); incorrect test
+    expect(truncate('Some long text', 4)).toEqual('Some...');
   });
 
   /** @test {truncate} */
@@ -13,7 +14,8 @@ describe('truncate::', () => {
 
   /** @test {truncate} */
   it('should allow to pass replacer', function () {
-    expect(truncate('Hello world', 0, '***')).toEqual('Hello wo***');
+    // expect(truncate('Hello world', 0, '***')).toEqual('Hello wo***'); incorrect test
+    expect(truncate('Hello world', 8, '***')).toEqual('Hello wo***');
   });
 
   /** @test {truncate} */

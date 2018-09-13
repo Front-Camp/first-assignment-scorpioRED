@@ -11,6 +11,16 @@
 */
 const sum = (a, b) => {
   /* your logic here...*/
+  function isArgumentAllowed(arg) {
+    return isFinite(arg) && !isNaN(arg) && typeof arg === 'number';
+  }
+
+  if (isArgumentAllowed(a) && isArgumentAllowed(b)){
+    return a+b;
+  }else {
+    throw new Error('one of arguments is not a number');
+  }
+
 };
 
 export default sum;

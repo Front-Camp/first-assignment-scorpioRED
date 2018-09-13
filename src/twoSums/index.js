@@ -10,6 +10,16 @@
  */
 const twoSums = (arr, base) => {
   /* your logic here...*/
+
+  for(var i=0; i <= arr.length; i++){
+    let firstEl = arr[i];
+    let shuldBeSeconEl = base - arr[i];
+
+    if(arr.includes(shuldBeSeconEl)){
+      return [firstEl, shuldBeSeconEl];
+    }
+
+  }
 };
 
 export default twoSums;

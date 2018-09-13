@@ -7,6 +7,13 @@
  */
 const getFlags = arr => {
   /* your logic here...*/
+  let arrayToReturn = new Array();
+
+  arr.forEach(ellOfArr => {
+    arrayToReturn = arrayToReturn.concat(ellOfArr["flags"])
+  })
+
+  return arrayToReturn;
 };
 
 export default getFlags;

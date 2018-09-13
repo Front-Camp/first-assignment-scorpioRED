@@ -8,6 +8,19 @@
 */
 const max = arr => {
   /* your logic here...*/
+
+
+  let maximus = -Infinity;
+
+  arr.forEach(el => {
+    if(el > maximus && isFinite(el) && !isNaN(el) ){
+      maximus = el;
+    }
+  })
+
+  return maximus;
 };
+
+
 
 export default max;

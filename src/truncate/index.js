@@ -9,6 +9,22 @@
  */
 const truncate = (str, length = 0, replacer = '...') => {
   /* your logic here...*/
+
+
+  if(str.length > 1 && length < str.length){
+
+    return `${str.slice(0, length)}${length > 0 ? replacer : ''}`;
+
+
+  }else if (length > str.length){
+    return str
+  }else {
+    return '';
+  }
+
+
 };
+
+
 
 export default truncate;
